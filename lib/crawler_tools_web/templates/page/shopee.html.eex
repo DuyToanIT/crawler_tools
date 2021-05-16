@@ -1,16 +1,30 @@
-<section class="phx-hero">
-  <h1><%= gettext "Crawler data by %{name}!", name: "Phoenix Framework" %></h1>
-  <p>Demo crawler data shopee</p>
-</section>
+<html>
+<head>
+    <meta name="viewport" content=
+            "width=device-width, initial-scale=1">
+</head>
+<body>
+    <section class="phx-hero">
+        <h1><%= gettext "Crawler data by %{name}!", name: "Phoenix Framework" %></h1>
+        <p>Demo crawler data shopee</p>
+    </section>
+    <section class="row">
+        <div id="contentTable">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+                <%= for item <- @item_store do %>
+                <tr>
+                    <td><%= item.item_basic.name %></td>
+                    <td class="money"><%= item.item_basic.price %></td>
+                </tr>
+                <% end %>
+            </table>
+        </div>
+    </section>
 
-<section class="row">
+</body>
+</html>
 
-
-  <div id="contentTable">
-    <pre>
-      <%= Poison.encode!(@item_store, pretty: true) %>
-    </pre>
-  </div>
-
-
-</section>

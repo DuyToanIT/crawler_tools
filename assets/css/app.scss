@@ -34,3 +34,22 @@
   display: block;
   margin: -1rem 0 2rem;
 }
+.currSign:after {
+  content: 'VNĐ';
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}

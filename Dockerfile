@@ -15,7 +15,7 @@ RUN npm install -g yarn
 
 # create app folder
 RUN mkdir /app
-COPY . /appdoc
+COPY . /app
 WORKDIR /app
 
 # install dependencies

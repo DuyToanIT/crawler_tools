@@ -1,0 +1,16 @@
+<section class="phx-hero">
+  <h1><%= gettext "Crawler data by %{name}!", name: "Phoenix Framework" %></h1>
+  <p>Demo crawler data shopee</p>
+</section>
+
+<section class="row">
+
+
+  <div id="contentTable">
+    <pre>
+      <%= Poison.encode!(@item_store, pretty: true) %>
+    </pre>
+  </div>
+
+
+</section>
